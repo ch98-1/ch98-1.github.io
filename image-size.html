@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Image Size Viewer</title>
+</head>
+<body>
+<!-- draws a image of entered size and width -->
+<h1>Image Size Viewer</h1>
+
+<!-- get the size and width of the image to draw and send it as a argument to draw function -->
+<form>
+Enter the size of the image: <br>
+Width:
+<input type="number" name="width" min="1" max="10000" value="500" required id="width"> <br>
+Height:
+<input type="number" name="height" min="1" max="10000" value="500" required id="height"> <br>
+<input type="button" value="Draw Image" onclick="draw(document.getElementById('width').value, document.getElementById('height').value)">
+<input type="reset">
+</form>
+
+<br>
+<br>
+
+<!-- where the image from below function will be outputted at -->
+<p id="image"></p>
+
+<!-- draws a image of set width and size -->
+<script>
+function draw(width, height) {
+    document.getElementById("image").innerHTML="<img src=\"PPT_PCB_1.JPG\" alt=\"Pulsed Plasma Thruster PCB\" width=\""+width+"\" height=\""+height+"\">";
+    return width * height;
+}
+</script>
+
+
+
+</body>
+</html> 
